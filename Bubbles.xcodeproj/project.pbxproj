@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		578B81221CD246A300904AEF /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 578B81211CD246A300904AEF /* GameController.m */; };
+		578B81281CD4CCB100904AEF /* red_bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 578B81231CD4CCB100904AEF /* red_bubble.png */; };
+		578B81291CD4CCB100904AEF /* blue_bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 578B81241CD4CCB100904AEF /* blue_bubble.png */; };
+		578B812A1CD4CCB100904AEF /* pink_bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 578B81251CD4CCB100904AEF /* pink_bubble.png */; };
+		578B812B1CD4CCB100904AEF /* black_bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 578B81261CD4CCB100904AEF /* black_bubble.png */; };
+		578B812C1CD4CCB100904AEF /* green_bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 578B81271CD4CCB100904AEF /* green_bubble.png */; };
+		578B81331CD61DA000904AEF /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 578B81321CD61DA000904AEF /* background.jpg */; };
+		578B81351CD61E9F00904AEF /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 578B81341CD61E9F00904AEF /* back.jpg */; };
+		578B81371CD8463E00904AEF /* mute.png in Resources */ = {isa = PBXBuildFile; fileRef = 578B81361CD8463E00904AEF /* mute.png */; };
+		578B81391CD8464800904AEF /* volume.ico in Resources */ = {isa = PBXBuildFile; fileRef = 578B81381CD8464800904AEF /* volume.ico */; };
+		578B813B1CD8465000904AEF /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 578B813A1CD8465000904AEF /* settings.png */; };
+		579BA6EC1CCCF4D600EDDA23 /* Bubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 579BA6EB1CCCF4D600EDDA23 /* Bubble.m */; };
+		579BA6F21CCE283800EDDA23 /* BubbleCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 579BA6F11CCE283800EDDA23 /* BubbleCollection.m */; };
+		57EBF6C81CD2047B00DAA355 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EBF6C71CD2047B00DAA355 /* SettingsController.m */; };
 		57FC9E5C1CCB62A90074FE71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FC9E5B1CCB62A90074FE71 /* main.m */; };
 		57FC9E5F1CCB62A90074FE71 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FC9E5E1CCB62A90074FE71 /* AppDelegate.m */; };
 		57FC9E621CCB62A90074FE71 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FC9E611CCB62A90074FE71 /* ViewController.m */; };
@@ -35,6 +49,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		578B81201CD246A300904AEF /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		578B81211CD246A300904AEF /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
+		578B81231CD4CCB100904AEF /* red_bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_bubble.png; sourceTree = "<group>"; };
+		578B81241CD4CCB100904AEF /* blue_bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_bubble.png; sourceTree = "<group>"; };
+		578B81251CD4CCB100904AEF /* pink_bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pink_bubble.png; sourceTree = "<group>"; };
+		578B81261CD4CCB100904AEF /* black_bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black_bubble.png; sourceTree = "<group>"; };
+		578B81271CD4CCB100904AEF /* green_bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_bubble.png; sourceTree = "<group>"; };
+		578B81321CD61DA000904AEF /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		578B81341CD61E9F00904AEF /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
+		578B81361CD8463E00904AEF /* mute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mute.png; sourceTree = "<group>"; };
+		578B81381CD8464800904AEF /* volume.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = volume.ico; sourceTree = "<group>"; };
+		578B813A1CD8465000904AEF /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		579BA6EA1CCCF4D600EDDA23 /* Bubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bubble.h; sourceTree = "<group>"; };
+		579BA6EB1CCCF4D600EDDA23 /* Bubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bubble.m; sourceTree = "<group>"; };
+		579BA6F01CCE283800EDDA23 /* BubbleCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleCollection.h; sourceTree = "<group>"; };
+		579BA6F11CCE283800EDDA23 /* BubbleCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleCollection.m; sourceTree = "<group>"; };
+		57EBF6C61CD2047B00DAA355 /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
+		57EBF6C71CD2047B00DAA355 /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
 		57FC9E571CCB62A90074FE71 /* Bubbles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubbles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57FC9E5B1CCB62A90074FE71 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		57FC9E5D1CCB62A90074FE71 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +110,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		579378AB1CCC9C9C00760D03 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				578B81341CD61E9F00904AEF /* back.jpg */,
+				578B81321CD61DA000904AEF /* background.jpg */,
+				578B81231CD4CCB100904AEF /* red_bubble.png */,
+				578B81241CD4CCB100904AEF /* blue_bubble.png */,
+				578B81251CD4CCB100904AEF /* pink_bubble.png */,
+				578B81261CD4CCB100904AEF /* black_bubble.png */,
+				578B813A1CD8465000904AEF /* settings.png */,
+				578B81381CD8464800904AEF /* volume.ico */,
+				578B81361CD8463E00904AEF /* mute.png */,
+				578B81271CD4CCB100904AEF /* green_bubble.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		579BA6E11CCCF01900EDDA23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				579BA6EA1CCCF4D600EDDA23 /* Bubble.h */,
+				579BA6EB1CCCF4D600EDDA23 /* Bubble.m */,
+				579BA6F01CCE283800EDDA23 /* BubbleCollection.h */,
+				579BA6F11CCE283800EDDA23 /* BubbleCollection.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		57EBF6C51CD2044E00DAA355 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57FC9E601CCB62A90074FE71 /* ViewController.h */,
+				57FC9E611CCB62A90074FE71 /* ViewController.m */,
+				57EBF6C61CD2047B00DAA355 /* SettingsController.h */,
+				57EBF6C71CD2047B00DAA355 /* SettingsController.m */,
+				578B81201CD246A300904AEF /* GameController.h */,
+				578B81211CD246A300904AEF /* GameController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		57FC9E4E1CCB62A90074FE71 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +174,11 @@
 		57FC9E591CCB62A90074FE71 /* Bubbles */ = {
 			isa = PBXGroup;
 			children = (
+				57EBF6C51CD2044E00DAA355 /* Controllers */,
+				579BA6E11CCCF01900EDDA23 /* Model */,
+				579378AB1CCC9C9C00760D03 /* Images */,
 				57FC9E5D1CCB62A90074FE71 /* AppDelegate.h */,
 				57FC9E5E1CCB62A90074FE71 /* AppDelegate.m */,
-				57FC9E601CCB62A90074FE71 /* ViewController.h */,
-				57FC9E611CCB62A90074FE71 /* ViewController.m */,
 				57FC9E631CCB62A90074FE71 /* Main.storyboard */,
 				57FC9E661CCB62A90074FE71 /* Assets.xcassets */,
 				57FC9E681CCB62A90074FE71 /* LaunchScreen.storyboard */,
@@ -243,9 +317,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				578B81331CD61DA000904AEF /* background.jpg in Resources */,
 				57FC9E6A1CCB62A90074FE71 /* LaunchScreen.storyboard in Resources */,
+				578B812A1CD4CCB100904AEF /* pink_bubble.png in Resources */,
+				578B81351CD61E9F00904AEF /* back.jpg in Resources */,
+				578B812B1CD4CCB100904AEF /* black_bubble.png in Resources */,
 				57FC9E671CCB62A90074FE71 /* Assets.xcassets in Resources */,
+				578B812C1CD4CCB100904AEF /* green_bubble.png in Resources */,
+				578B81391CD8464800904AEF /* volume.ico in Resources */,
 				57FC9E651CCB62A90074FE71 /* Main.storyboard in Resources */,
+				578B81371CD8463E00904AEF /* mute.png in Resources */,
+				578B813B1CD8465000904AEF /* settings.png in Resources */,
+				578B81291CD4CCB100904AEF /* blue_bubble.png in Resources */,
+				578B81281CD4CCB100904AEF /* red_bubble.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +354,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57EBF6C81CD2047B00DAA355 /* SettingsController.m in Sources */,
 				57FC9E621CCB62A90074FE71 /* ViewController.m in Sources */,
 				57FC9E5F1CCB62A90074FE71 /* AppDelegate.m in Sources */,
 				57FC9E5C1CCB62A90074FE71 /* main.m in Sources */,
+				578B81221CD246A300904AEF /* GameController.m in Sources */,
+				579BA6EC1CCCF4D600EDDA23 /* Bubble.m in Sources */,
+				579BA6F21CCE283800EDDA23 /* BubbleCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +586,7 @@
 				57FC9E861CCB62A90074FE71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57FC9E871CCB62A90074FE71 /* Build configuration list for PBXNativeTarget "BubblesTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +595,7 @@
 				57FC9E891CCB62A90074FE71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57FC9E8A1CCB62A90074FE71 /* Build configuration list for PBXNativeTarget "BubblesUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +604,7 @@
 				57FC9E8C1CCB62A90074FE71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
