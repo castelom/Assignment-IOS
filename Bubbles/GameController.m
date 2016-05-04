@@ -87,12 +87,26 @@
         new_b = (Bubble*) my_bubbles[i];
         [new_b setFrame:CGRectMake(new_b.position_x, new_b.position_y, widthBubble, heightBubble)];
         [new_b addTarget:self action:@selector(playBubble:) forControlEvents:UIControlEventTouchUpInside];
+        
+        CGAffineTransform trans = CGAffineTransformScale(new_b.transform, 0.01, 0.01);
+        new_b.transform = trans;
         [self.view addSubview: new_b];
+        [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            new_b.transform  = CGAffineTransformScale(new_b.transform, 100.0, 100.0);
+             }completion:nil];
+        
     }
 }
 
 -(void) RemoveBubble: (Bubble *) bubble{
-    [bubble removeFromSuperview];
+    [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveLinear
+                     animations:^{
+                         bubble.transform = CGAffineTransformScale(bubble.transform, 0.01, 0.01);
+                     }
+                     completion:^(BOOL finished) {
+                         [bubble removeFromSuperview];
+                     }];
+    
     //[BubbleCollection PrintArray:self.bubbles];
 }
 //Notification Methods
