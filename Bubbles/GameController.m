@@ -74,7 +74,7 @@
         [self addBubbles:notification.object];
     }
     else if([[notification name] isEqualToString:@"REMOVE_BUBBLE"]){
-        [self RemoveBubble:notification.object];
+        [self RemoveBubbleWithAnimation:notification.object];
     }
     
 }
@@ -98,7 +98,7 @@
     }
 }
 
--(void) RemoveBubble: (Bubble *) bubble{
+-(void) RemoveBubbleWithAnimation: (Bubble *) bubble{
     [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveLinear
                      animations:^{
                          bubble.transform = CGAffineTransformScale(bubble.transform, 0.01, 0.01);
