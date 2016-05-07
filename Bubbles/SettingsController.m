@@ -7,6 +7,7 @@
 //
 
 #import "SettingsController.h"
+#import "UserSettings.h"
 
 @interface SettingsController ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *timer_options;
@@ -18,41 +19,39 @@
 @implementation SettingsController
 
 
-
-int timer_segment = 0;
-int timer = 60;
-int num_bubbles = 15;
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.bubbles_label.text = [@(num_bubbles) stringValue];
-    self.bubbles_option.value = (float) num_bubbles;
-    [self.timer_options setSelectedSegmentIndex:timer_segment];
-    // Do any additional setup after loading the view.
+    [self LoadSettingsInformation];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    
     // Dispose of any resources that can be recreated.
 }
+
+- (void)LoadSettingsInformation{
+    NSString* num_bubbles = [[NSUserDefaults standardUserDefaults] valueForKey:@"settings_bubbles"];
+    self.bubbles_label.text = num_bubbles;
+    self.bubbles_option.value = (float) [num_bubbles integerValue];
+    
+    int timer_segment = [UserSettings getTimesegment:[[NSUserDefaults standardUserDefaults] valueForKey:@"settings_time"]];
+    [self.timer_options setSelectedSegmentIndex:timer_segment];
+}
+
 - (IBAction)SaveSettings:(id)sender {
-    //[self performSegueWithIdentifier:@"home_screen" sender:nil];
-    NSLog(@"time = %d, Max_bubbles = %d", timer, num_bubbles);
+    
 }
 - (IBAction)ChooseTimer:(id)sender {
     UISegmentedControl* timer_control = (UISegmentedControl*) sender;
-    timer_segment = (int)[timer_control selectedSegmentIndex];
     NSString* string_timer = [timer_control titleForSegmentAtIndex:[timer_control selectedSegmentIndex]];
-    timer = (int)[string_timer integerValue];
-    
+    [[NSUserDefaults standardUserDefaults] setValue:string_timer forKey:@"settings_time"];
 }
 - (IBAction)ChooseBubbles:(id)sender {
     UISlider* slider = (UISlider *) sender;
     self.bubbles_label.text = [NSString stringWithFormat:@"%d", (int) slider.value];
-    num_bubbles = (int)[self.bubbles_label.text integerValue];
+    [[NSUserDefaults standardUserDefaults] setValue:self.bubbles_label.text forKey:@"settings_bubbles"];
 }
-
 /*
 #pragma mark - Navigation
 

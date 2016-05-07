@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		576B75711CDE02F800BF0552 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 576B75701CDE02F800BF0552 /* Settings.bundle */; };
+		576B75741CDE115C00BF0552 /* UserSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B75731CDE115C00BF0552 /* UserSettings.m */; };
 		578B81221CD246A300904AEF /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 578B81211CD246A300904AEF /* GameController.m */; };
 		578B81281CD4CCB100904AEF /* red_bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 578B81231CD4CCB100904AEF /* red_bubble.png */; };
 		578B81291CD4CCB100904AEF /* blue_bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 578B81241CD4CCB100904AEF /* blue_bubble.png */; };
@@ -49,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		576B75701CDE02F800BF0552 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		576B75721CDE115C00BF0552 /* UserSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettings.h; sourceTree = "<group>"; };
+		576B75731CDE115C00BF0552 /* UserSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettings.m; sourceTree = "<group>"; };
 		578B81201CD246A300904AEF /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		578B81211CD246A300904AEF /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 		578B81231CD4CCB100904AEF /* red_bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_bubble.png; sourceTree = "<group>"; };
@@ -134,6 +139,8 @@
 				579BA6EB1CCCF4D600EDDA23 /* Bubble.m */,
 				579BA6F01CCE283800EDDA23 /* BubbleCollection.h */,
 				579BA6F11CCE283800EDDA23 /* BubbleCollection.m */,
+				576B75721CDE115C00BF0552 /* UserSettings.h */,
+				576B75731CDE115C00BF0552 /* UserSettings.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -154,6 +161,7 @@
 		57FC9E4E1CCB62A90074FE71 = {
 			isa = PBXGroup;
 			children = (
+				576B75701CDE02F800BF0552 /* Settings.bundle */,
 				57FC9E591CCB62A90074FE71 /* Bubbles */,
 				57FC9E731CCB62A90074FE71 /* BubblesTests */,
 				57FC9E7E1CCB62A90074FE71 /* BubblesUITests */,
@@ -323,6 +331,7 @@
 				578B81351CD61E9F00904AEF /* back.jpg in Resources */,
 				578B812B1CD4CCB100904AEF /* black_bubble.png in Resources */,
 				57FC9E671CCB62A90074FE71 /* Assets.xcassets in Resources */,
+				576B75711CDE02F800BF0552 /* Settings.bundle in Resources */,
 				578B812C1CD4CCB100904AEF /* green_bubble.png in Resources */,
 				578B81391CD8464800904AEF /* volume.ico in Resources */,
 				57FC9E651CCB62A90074FE71 /* Main.storyboard in Resources */,
@@ -355,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57EBF6C81CD2047B00DAA355 /* SettingsController.m in Sources */,
+				576B75741CDE115C00BF0552 /* UserSettings.m in Sources */,
 				57FC9E621CCB62A90074FE71 /* ViewController.m in Sources */,
 				57FC9E5F1CCB62A90074FE71 /* AppDelegate.m in Sources */,
 				57FC9E5C1CCB62A90074FE71 /* main.m in Sources */,

@@ -34,11 +34,13 @@
     */
 }
 
--(void)initView{
+-(void) initView{
     [super viewDidLoad];
+    NSString* remain_time = [[NSUserDefaults standardUserDefaults] valueForKey:@"settings_time"];
+    NSString* max_bubbles = [[NSUserDefaults standardUserDefaults] valueForKey:@"settings_bubbles"];
     self.score = 0;
-    self.remain_time = 10;
-    self.max_bubbles = 4;
+    self.remain_time = (int)[remain_time integerValue];
+    self.max_bubbles = (int)[max_bubbles integerValue];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(UpdateTime) userInfo:nil repeats:YES];
     [self.timer fire];
 }

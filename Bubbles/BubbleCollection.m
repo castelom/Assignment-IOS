@@ -106,8 +106,6 @@
 
 +(void)sendNotificantion: (NSString*) type_notification withObj: (NSObject*) obj{
     [[NSNotificationCenter defaultCenter] postNotificationName:type_notification object:obj];
-    
-    
 }
 
 +(void)ChangeBubbles: (NSMutableArray *) bubbles withMAXBubbles: (int) maxbubbles withFramewidht: (float) Max_widht withFrameheight: (float) Max_height{

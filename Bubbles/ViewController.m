@@ -34,11 +34,11 @@ bool ismute = false;
 }
 
 - (IBAction)playButton:(id)sender {
-    [self performSegueWithIdentifier:@"game" sender:nil];
+   //[self performSegueWithIdentifier:@"game" sender:nil];
     
 }
 - (IBAction)settingsAction:(id)sender {
-    [self performSegueWithIdentifier:@"settings" sender:nil];
+    //[self performSegueWithIdentifier:@"settings" sender:nil];
 }
 - (IBAction)volumesAction:(id)sender {
     if(ismute == false){
