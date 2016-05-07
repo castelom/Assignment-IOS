@@ -31,7 +31,23 @@
     [test setFrame:CGRectMake(test.position_x, test.position_y, widthBubble, heightBubble)];
     [self.view addSubview: test];
     NSLog(@"position %f %f", test.position_x, test.position_y);
-                                */
+    */
+}
+
+-(void)initView{
+    [super viewDidLoad];
+    self.score = 0;
+    self.remain_time = 10;
+    self.max_bubbles = 4;
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(UpdateTime) userInfo:nil repeats:YES];
+    [self.timer fire];
+}
+
+/*Controller Methods*/
+-(void)ConfigureController{
+    [self registerNotifications];
+    self.label_score.text = [NSString stringWithFormat:@"Score    %d",self.score];
+    self.bubbles = [BubbleCollection CreateBubbles:self.max_bubbles withFrameX: self.view.frame.size.width withFrameY:self.view.frame.size.height];
 }
 
 -(void)UpdateTime{
@@ -46,23 +62,6 @@
     }
 }
 
--(void)initView{
-    [super viewDidLoad];
-    self.score = 0;
-    self.remain_time = 10;
-    self.max_bubbles = 4;
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(UpdateTime) userInfo:nil repeats:YES];
-    [self.timer fire];
-}
-
-
-
-/*Controller Methods*/
--(void)ConfigureController{
-    [self registerNotifications];
-    self.label_score.text = [NSString stringWithFormat:@"Score    %d",self.score];
-    self.bubbles = [BubbleCollection CreateBubbles:self.max_bubbles withFrameX: self.view.frame.size.width withFrameY:self.view.frame.size.height];
-}
 -(void) registerNotifications{
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"ADD_BUBBLES"    object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"REMOVE_BUBBLE" object:nil];
