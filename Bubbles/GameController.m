@@ -18,6 +18,7 @@
 @property int score;
 @property int remain_time;
 @property int max_bubbles;
+@property int last_bubble;
 @property NSTimer* timer;
 @end
 
@@ -41,7 +42,7 @@
     self.score = 0;
     self.remain_time = (int)[remain_time integerValue];
     self.max_bubbles = (int)[max_bubbles integerValue];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(UpdateTime) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(UpdateTime) userInfo:nil repeats:YES];
     [self.timer fire];
 }
 
@@ -115,7 +116,7 @@
 
 - (IBAction)playBubble:(id)sender {
     Bubble *b = (Bubble*) sender;
-    self.score += b.pointBubble;
+    [self CalculeScore:self.last_bubble withCurrentPoint:b.pointBubble];
     self.label_score.text = [NSString stringWithFormat:@"Score    %d",self.score];
     [BubbleCollection RemoveBubbles:b in:self.bubbles];
     
@@ -124,6 +125,17 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)CalculeScore: (int) last_point withCurrentPoint: (int) current_point{
+    if(last_point == current_point){
+        float score = ((float) current_point)*1.5;
+        self.score += ((int)score);
+    }
+    else{
+        self.score += current_point;
+        self.last_bubble = current_point;
+    }
 }
 
 /*
