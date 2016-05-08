@@ -52,11 +52,12 @@
                     <connections>
                         <outlet property="label_score" destination="ov9-Y4-1Ht" id="kKH-0i-jX3"/>
                         <outlet property="label_timer" destination="ndb-DQ-Hyo" id="gQW-IZ-fVr"/>
+                        <segue destination="9tl-ww-I24" kind="show" identifier="record" id="0Nk-iq-AA1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bBM-GY-xtp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="779" y="372"/>
+            <point key="canvasLocation" x="815" y="372"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -70,14 +71,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="328" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTZ-cN-72v">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player1" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTZ-cN-72v">
                                 <rect key="frame" x="35" y="235" width="259" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="259" id="mf7-VF-9GM"/>
                                     <constraint firstAttribute="height" constant="30" id="pd1-g7-fhf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUBBLES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9L-dt-f3Y">
                                 <rect key="frame" x="29" y="72" width="271" height="107"/>
@@ -118,7 +119,6 @@
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BxG-cI-8rs"/>
-                                    <segue destination="4Ft-yR-wIc" kind="show" identifier="game" id="IBK-Dx-HJ8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -149,12 +149,34 @@
                     <connections>
                         <outlet property="appNameLabel" destination="z9L-dt-f3Y" id="G05-7a-PMK"/>
                         <outlet property="nickname" destination="MTZ-cN-72v" id="XoR-zq-Uop"/>
+                        <outlet property="username" destination="MTZ-cN-72v" id="E9J-NS-9JX"/>
                         <outlet property="volumeButton" destination="lSF-Hv-GoB" id="lZL-yA-dxI"/>
+                        <segue destination="4Ft-yR-wIc" kind="show" identifier="game" id="5iR-7O-6jL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="325" y="120"/>
+        </scene>
+        <!--Record Controller-->
+        <scene sceneID="Xaj-qG-n53">
+            <objects>
+                <viewController id="9tl-ww-I24" customClass="RecordController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oy8-Sw-LMS"/>
+                        <viewControllerLayoutGuide type="bottom" id="sbe-9K-7CQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FtL-cT-flx">
+                        <rect key="frame" x="0.0" y="0.0" width="328" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="328" height="500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="drm-oM-UU7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1302" y="372"/>
         </scene>
         <!--View Controller Settings-->
         <scene sceneID="IzE-xy-bFG">

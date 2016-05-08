@@ -7,25 +7,50 @@
 //
 
 #import "ViewController.h"
-
+#import "User.h"
+#import "GameController.h"
 
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *appNameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *volumeButton;
-
+@property (weak, nonatomic) IBOutlet UITextField *username;
 
 
 @end
 
-bool ismute = false;
-
 @implementation ViewController
+bool ismute = false;
+UIAlertController* alert;
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if([segue.identifier isEqualToString:@"game"]){
+        User* user = [[User alloc] initUser];
+        user.username = self.username.text;
+        GameController* game = [segue destinationViewController];
+        game.user = user;
+        
+    }
+    
+}
+-(UIAlertController *) CreateAlert{
+    UIAlertController* new_alert = [UIAlertController alertControllerWithTitle:@"My Alert"
+                                        message:@"Invalid name. Please inform the user name before start."
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    [new_alert addAction:defaultAction];
+    
+    return new_alert;
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    //self.view.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed:@"background.jpg"]];
+    alert = [self CreateAlert];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,8 +59,13 @@ bool ismute = false;
 }
 
 - (IBAction)playButton:(id)sender {
-   //[self performSegueWithIdentifier:@"game" sender:nil];
-    
+    if([self.username.text isEqualToString:@""]){
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    else{
+        
+        [self performSegueWithIdentifier:@"game" sender:nil];
+    }
 }
 - (IBAction)settingsAction:(id)sender {
     //[self performSegueWithIdentifier:@"settings" sender:nil];

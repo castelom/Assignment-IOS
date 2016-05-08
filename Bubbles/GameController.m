@@ -7,32 +7,30 @@
 //
 
 #import "GameController.h"
-#import "BubbleCollection.h"
-#import "Bubble.h"
+
 
 
 @interface GameController ()
-@property (weak, nonatomic) IBOutlet UILabel *label_score;
-@property (weak, nonatomic) IBOutlet UILabel *label_timer;
-@property (strong, nonatomic) NSMutableArray* bubbles;
-@property int score;
-@property int remain_time;
-@property int max_bubbles;
-@property int last_bubble;
-@property NSTimer* timer;
+
 @end
 
 @implementation GameController
 
+@synthesize user;
+
 - (void)viewDidLoad {
     [self initView];
-    [self ConfigureController];/*
+    [self ConfigureController];
+    NSLog(@"Username = %@",self.user.username);
+   
+    /*
     Bubble * test = [Bubble alloc];
     test = [test initBubble:@"Black" with:40 withX:0 withY:self.view.frame.size.height-60];
     [test setFrame:CGRectMake(test.position_x, test.position_y, widthBubble, heightBubble)];
     [self.view addSubview: test];
     NSLog(@"position %f %f", test.position_x, test.position_y);
     */
+    
 }
 
 -(void) initView{
@@ -42,7 +40,7 @@
     self.score = 0;
     self.remain_time = (int)[remain_time integerValue];
     self.max_bubbles = (int)[max_bubbles integerValue];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(UpdateTime) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(UpdateTime) userInfo:nil repeats:YES];
     [self.timer fire];
 }
 
@@ -53,10 +51,30 @@
     self.bubbles = [BubbleCollection CreateBubbles:self.max_bubbles withFrameX: self.view.frame.size.width withFrameY:self.view.frame.size.height];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if([segue.identifier isEqualToString:@"record"]){
+        user.userscore = self.score;
+        RecordController* record = [segue destinationViewController];
+        record.user = user;
+        
+    }
+    
+}
+
+-(void)showRecords{
+    [self performSegueWithIdentifier:@"record" sender:nil];
+}
 -(void)UpdateTime{
     if(self.remain_time == 0){
+        UIAlertController* alert = [self CreateAlert];
         self.label_timer.text = [NSString stringWithFormat:@"Time  %d", self.remain_time];
         [self.timer invalidate];
+        [self presentViewController:alert animated:YES completion:^{
+            [self showRecords];
+        }];
+        
+        
     }
     else{
         self.label_timer.text = [NSString stringWithFormat:@"Time  %d", self.remain_time];
@@ -113,6 +131,19 @@
 }
 //Notification Methods
 
+-(UIAlertController *) CreateAlert{
+    UIAlertController* new_alert = [UIAlertController alertControllerWithTitle:@"GAME OVER"
+                                                                       message:@"You was great!"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    [new_alert addAction:defaultAction];
+    
+    return new_alert;
+    
+}
 
 - (IBAction)playBubble:(id)sender {
     Bubble *b = (Bubble*) sender;

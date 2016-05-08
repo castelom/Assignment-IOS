@@ -22,6 +22,8 @@
 		578B813B1CD8465000904AEF /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 578B813A1CD8465000904AEF /* settings.png */; };
 		579BA6EC1CCCF4D600EDDA23 /* Bubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 579BA6EB1CCCF4D600EDDA23 /* Bubble.m */; };
 		579BA6F21CCE283800EDDA23 /* BubbleCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 579BA6F11CCE283800EDDA23 /* BubbleCollection.m */; };
+		57ABEBF91CDF18780099DF83 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ABEBF81CDF18780099DF83 /* User.m */; };
+		57ABEBFC1CDF52AB0099DF83 /* RecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ABEBFB1CDF52AB0099DF83 /* RecordController.m */; };
 		57EBF6C81CD2047B00DAA355 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EBF6C71CD2047B00DAA355 /* SettingsController.m */; };
 		57FC9E5C1CCB62A90074FE71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FC9E5B1CCB62A90074FE71 /* main.m */; };
 		57FC9E5F1CCB62A90074FE71 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FC9E5E1CCB62A90074FE71 /* AppDelegate.m */; };
@@ -70,6 +72,10 @@
 		579BA6EB1CCCF4D600EDDA23 /* Bubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bubble.m; sourceTree = "<group>"; };
 		579BA6F01CCE283800EDDA23 /* BubbleCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleCollection.h; sourceTree = "<group>"; };
 		579BA6F11CCE283800EDDA23 /* BubbleCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleCollection.m; sourceTree = "<group>"; };
+		57ABEBF71CDF18780099DF83 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		57ABEBF81CDF18780099DF83 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		57ABEBFA1CDF52AB0099DF83 /* RecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordController.h; sourceTree = "<group>"; };
+		57ABEBFB1CDF52AB0099DF83 /* RecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordController.m; sourceTree = "<group>"; };
 		57EBF6C61CD2047B00DAA355 /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
 		57EBF6C71CD2047B00DAA355 /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
 		57FC9E571CCB62A90074FE71 /* Bubbles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubbles.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +147,8 @@
 				579BA6F11CCE283800EDDA23 /* BubbleCollection.m */,
 				576B75721CDE115C00BF0552 /* UserSettings.h */,
 				576B75731CDE115C00BF0552 /* UserSettings.m */,
+				57ABEBF71CDF18780099DF83 /* User.h */,
+				57ABEBF81CDF18780099DF83 /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -154,6 +162,8 @@
 				57EBF6C71CD2047B00DAA355 /* SettingsController.m */,
 				578B81201CD246A300904AEF /* GameController.h */,
 				578B81211CD246A300904AEF /* GameController.m */,
+				57ABEBFA1CDF52AB0099DF83 /* RecordController.h */,
+				57ABEBFB1CDF52AB0099DF83 /* RecordController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -365,11 +375,13 @@
 			files = (
 				57EBF6C81CD2047B00DAA355 /* SettingsController.m in Sources */,
 				576B75741CDE115C00BF0552 /* UserSettings.m in Sources */,
+				57ABEBF91CDF18780099DF83 /* User.m in Sources */,
 				57FC9E621CCB62A90074FE71 /* ViewController.m in Sources */,
 				57FC9E5F1CCB62A90074FE71 /* AppDelegate.m in Sources */,
 				57FC9E5C1CCB62A90074FE71 /* main.m in Sources */,
 				578B81221CD246A300904AEF /* GameController.m in Sources */,
 				579BA6EC1CCCF4D600EDDA23 /* Bubble.m in Sources */,
+				57ABEBFC1CDF52AB0099DF83 /* RecordController.m in Sources */,
 				579BA6F21CCE283800EDDA23 /* BubbleCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
