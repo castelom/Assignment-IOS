@@ -21,8 +21,7 @@
 - (void)viewDidLoad {
     [self initView];
     [self ConfigureController];
-    NSLog(@"Username = %@",self.user.username);
-   
+    
     /*
     Bubble * test = [Bubble alloc];
     test = [test initBubble:@"Black" with:40 withX:0 withY:self.view.frame.size.height-60];
@@ -54,7 +53,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     if([segue.identifier isEqualToString:@"record"]){
-        user.userscore = self.score;
+        user.userscore = [NSString stringWithFormat:@"%d", self.score];
         RecordController* record = [segue destinationViewController];
         record.user = user;
         
@@ -70,10 +69,7 @@
         UIAlertController* alert = [self CreateAlert];
         self.label_timer.text = [NSString stringWithFormat:@"Time  %d", self.remain_time];
         [self.timer invalidate];
-        [self presentViewController:alert animated:YES completion:^{
-            [self showRecords];
-        }];
-        
+        [self presentViewController:alert animated:YES completion:nil];
         
     }
     else{
@@ -137,7 +133,13 @@
                                                                 preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {}];
+                                                          handler:^(UIAlertAction * action)
+                                    {
+                                        //Do some thing here
+                                        [self showRecords];
+                                        
+                                    }];
+
     
     [new_alert addAction:defaultAction];
     
@@ -168,6 +170,8 @@
         self.last_bubble = current_point;
     }
 }
+
+
 
 /*
 #pragma mark - Navigation

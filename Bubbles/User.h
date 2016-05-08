@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface User : NSObject
+@interface User : NSObject <NSCoding>
 @property NSString* username;
-@property int userscore;
+@property NSString* userscore;
 
 -(instancetype) initUser;
+- (id)initWithCoder:(NSCoder *)decoder;
+- (void)saveData;
 @end

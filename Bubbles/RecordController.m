@@ -17,14 +17,14 @@
 @synthesize user;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@ %d", user.username, user.userscore);
-    // Do any additional setup after loading the view.
+    [self.user saveData];   // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation
