@@ -17,7 +17,23 @@
 @synthesize user;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.user saveData];   // Do any additional setup after loading the view.
+    [self rank];
+    //[self.user saveData];   // Do any additional setup after loading the view.
+}
+-(void) rank{
+    NSString * player_name = [[NSUserDefaults standardUserDefaults] objectForKey: @"first_player_name"];
+    NSString * player_score = [[NSUserDefaults standardUserDefaults] objectForKey:@"first_player_score"];
+    if(player_name == nil){
+        [[NSUserDefaults standardUserDefaults] setObject:self.user.username  forKey:@"first_player_name"];
+        [[NSUserDefaults standardUserDefaults] setObject:self.user.userscore forKey:@"first_player_score"];
+        self.first_name.text = self.user.username;
+        self.first_score.text = self.user.userscore;
+    }
+    else{
+        self.first_name.text = player_name;
+        self.first_score.text = player_score;
+        NSLog(@"I am here");
+    }
 }
 
 - (void)didReceiveMemoryWarning {

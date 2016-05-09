@@ -10,42 +10,6 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Best Players</string>
-		</dict>
-		<dict>
-			<key>DefaultValue</key>
-			<string></string>
-			<key>Type</key>
-			<string>PSTitleValueSpecifier</string>
-			<key>Title</key>
-			<string>First</string>
-			<key>Key</key>
-			<string>first</string>
-		</dict>
-		<dict>
-			<key>DefaultValue</key>
-			<string></string>
-			<key>Type</key>
-			<string>PSTitleValueSpecifier</string>
-			<key>Title</key>
-			<string>Second</string>
-			<key>Key</key>
-			<string>second</string>
-		</dict>
-		<dict>
-			<key>DefaultValue</key>
-			<string></string>
-			<key>Type</key>
-			<string>PSTitleValueSpecifier</string>
-			<key>Title</key>
-			<string>Third</string>
-			<key>Key</key>
-			<string>third</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>Title</key>
 			<string>About Bubbles</string>
 		</dict>
 		<dict>
